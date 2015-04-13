@@ -1,5 +1,5 @@
 #
-# system.prop for m7pro
+# system.prop for m9pro
 #
 persist.sys.usb.config=adb 
 ro.opengles.version = 131072 
