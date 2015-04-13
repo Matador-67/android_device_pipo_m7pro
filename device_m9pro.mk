@@ -5,13 +5,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-$(call inherit-product-if-exists, vendor/pipo/m7pro/m7pro-vendor.mk)
+$(call inherit-product-if-exists, vendor/pipo/m9pro/m9pro-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/pipo/m7pro/overlay/aosp
+DEVICE_PACKAGE_OVERLAYS += device/pipo/m9pro/overlay/aosp
 
-TARGET_PREBUILT_KERNEL := device/pipo/m7pro/pipo_rom/extracted/kernel
+TARGET_PREBUILT_KERNEL := device/pipo/m9pro/pipo_rom/extracted/kernel
 
-LOCAL_PATH := device/pipo/m7pro
+LOCAL_PATH := device/pipo/m9pro
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
@@ -20,37 +20,37 @@ else
 endif
 
 # maybe we should use the tablets init rc?
-#TARGET_PROVIDES_INIT_RC := device/pipo/m7pro/_init.rc
+#TARGET_PROVIDES_INIT_RC := device/pipo/m9pro/_init.rc
 
 # system files
 PRODUCT_COPY_FILES += \
-        device/pipo/m7pro/initlogo.rle:root/initlogo.rle
-	#device/pipo/m7pro/ueventd.rc:root/ueventd.rc \
-	#device/pipo/m7pro/ueventd.rk30board.rc:root/ueventd.rk30board.rc \
-	#device/pipo/m7pro/prebuilt/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko.3.0.36+ \
-	#device/pipo/m7pro/prebuilt/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko \
-	#device/pipo/m7pro/prebuilt/initlogo.rle:root/initlogo.rle 
-#	device/pipo/m7pro/prebuilt/charger:root/charger
+        device/pipo/m9pro/initlogo.rle:root/initlogo.rle
+	#device/pipo/m9pro/ueventd.rc:root/ueventd.rc \
+	#device/pipo/m9pro/ueventd.rk30board.rc:root/ueventd.rk30board.rc \
+	#device/pipo/m9pro/prebuilt/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko.3.0.36+ \
+	#device/pipo/m9pro/prebuilt/rk30xxnand_ko.ko.3.0.36+:root/rk30xxnand_ko.ko \
+	#device/pipo/m9pro/prebuilt/initlogo.rle:root/initlogo.rle 
+#	device/pipo/m9pro/prebuilt/charger:root/charger
         #device/rockchip/rk3188/rk29-ipp.ko:root/rk29-ipp.ko \
         #device/rockchip/rk3188/ueventd.goldfish.rc:root/ueventd.goldfish.rc
 
 #copy init scripts
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,init.*,device/pipo/m7pro/,root)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,init.*,device/pipo/m9pro/,root)
 #fstab
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,fstab.*,device/pipo/m7pro/,root)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,fstab.*,device/pipo/m9pro/,root)
 
 #libbluetooth_jni.so
-#PRODUCT_COPY_FILES += device/pipo/m7pro/pipo_rom/extracted/system/lib/libbluetooth_jni.so:obj/lib/libbluetooth_jni.so
+#PRODUCT_COPY_FILES += device/pipo/m9pro/pipo_rom/extracted/system/lib/libbluetooth_jni.so:obj/lib/libbluetooth_jni.so
 #bluetooth chipset fm java library (necessary for Bluetooth.apk not to crash with JNI error)
-#PRODUCT_COPY_FILES += device/pipo/m7pro/pipo_rom/extracted/system/framework/com.broadcom.bt.jar:common/obj/JAVA_LIBRARIES/com.broadcom.bt_intermediates/javalib.jar
+#PRODUCT_COPY_FILES += device/pipo/m9pro/pipo_rom/extracted/system/framework/com.broadcom.bt.jar:common/obj/JAVA_LIBRARIES/com.broadcom.bt_intermediates/javalib.jar
 
 # copy prebuilt files
-include device/pipo/m7pro/proprietary_files.mk
+include device/pipo/m9pro/proprietary_files.mk
 
 # copy the builder script
 PRODUCT_COPY_FILES += \
-        device/pipo/m7pro/custom_boot.sh:custom_boot.sh \
-	device/pipo/m7pro/flash.sh:flash.sh
+        device/pipo/m9pro/custom_boot.sh:custom_boot.sh \
+	device/pipo/m9pro/flash.sh:flash.sh
 
 # hardware-specific feature permissions
 PRODUCT_COPY_FILES += \
@@ -143,5 +143,5 @@ $(call inherit-product, build/target/product/full_base.mk)
 
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_m7pro
-PRODUCT_DEVICE := m7pro
+PRODUCT_NAME := full_m9pro
+PRODUCT_DEVICE := m9pro
