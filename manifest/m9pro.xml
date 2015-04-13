@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<project path="device/pipo/m9pro" name="Matador-67/android_device_pipo_m9pro" remote="github" revision="master"/>
+</manifest>
