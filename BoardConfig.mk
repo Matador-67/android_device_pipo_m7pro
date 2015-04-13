@@ -80,7 +80,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_PROPERTY_OVERRIDES += sys.device.type=tablet
 
-BOARD_EGL_CFG := device/pipo/m7pro/pipo_rom/extracted/system/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/pipo/m9pro/pipo_rom/extracted/system/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_USES_HGL := true
 BOARD_USES_OVERLAY := true
@@ -104,5 +104,5 @@ WIFI_DRIVER_MODULE_NAME := "wlan"
 #bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/pipo/m7pro/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/pipo/m9pro/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/pipo/m7pro/bluetooth/vnd_pipo.txt
