@@ -105,4 +105,4 @@ WIFI_DRIVER_MODULE_NAME := "wlan"
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/pipo/m9pro/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/pipo/m7pro/bluetooth/vnd_pipo.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/pipo/m9pro/bluetooth/vnd_pipo.txt
