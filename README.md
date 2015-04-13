@@ -1,4 +1,4 @@
-CYANOGENMOD for the Pipo M7pro
+CYANOGENMOD for the Pipo M9pro
 =============================
 
 this is work in progress!
@@ -26,7 +26,7 @@ FOR THE HACKERS
 There is a serial debug port on the main PCB next to the power jack.
 Its labeled RX, TX, GND. You can directly connect a FT232-3V3 (3.3V type! The 5V type will kill the board)
 serial usb converter cable to it. Use 115200 8N1 not flow control.
-There is also a shell on that.
+ThM9e is also a shell on that.
 
 HOW TO BUILD
 =============================
@@ -35,25 +35,25 @@ HOW TO BUILD
 set up a plain cm11 build tree (see cm doc)
 
 2) setup the local manifest:
-paste this to .repo/local_manifests/m7pro.xml:
+paste this to .repo/local_manifests/m9pro.xml:
 ----------------------------------------------------------------
 	<?xml version="1.0" encoding="UTF-8"?>
 	<manifest>
-	<project path="device/pipo/m7pro" name="fishpepper/android_device_pipo_m7pro" remote="github" revision="master"/>
+	<project path="device/pipo/m9pro" name="Matador-67/android_device_pipo_m9pro" remote="github" revision="master"/>
 	<!-- <remove-project name="CyanogenMod/android_packages_apps_Bluetooth" />
 	<project path="packages/apps/Bluetooth" name="fishpepper/android_packages_apps_Bluetooth" remote="github" revision="master"/> -->
 	</manifest>
 ----------------------------------------------------------------
 
 3) download the rom from pipo:
-http://www.mediafire.com/download/vsl4l9hstydb2yj/M7_pro_3G_&_NO_3G_Chinese_4.4_20140326.rar
-Place it in the source tree under devices/pipo/m7pro/pipo_rom/20140326.rar
+http://www.mediafire.com/download/vsl4l9hstydb2yj/M9_pro_3G_&_NO_3G_Chinese_4.4_20140326.rar
+Place it in the source tree under devices/pipo/m9pro/pipo_rom/20140326.rar
 run./fetch_prebuilts.sh
 
 This will extract all binary blobs from that rom
 
 4) build the source by calling 
-brunch m7pro
+brunch m9pro
 
 HOW TO FLASH
 =============================
@@ -69,7 +69,7 @@ pressing power on for 5-8s. Then release both.
 1) verify that your board is the same as mine by running > rkflashtool p
 
 	FIRMWARE_VER:4.4.2
-	MACHINE_MODEL:M7pro
+	MACHINE_MODEL:M9pro
 	MACHINE_ID:007
 	MANUFACTURER:RK30SDK
 	MAGIC: 0x5041524B
