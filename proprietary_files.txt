@@ -98,9 +98,7 @@ system/etc/bluetooth/bt_did.conf
 #misc fw
 system/etc/firmware/nvram_RK903_26M.cal
 system/etc/firmware/fw_awnb108.bin
-system/etc/firmware/RT5370AP.dat
 system/etc/firmware/otp.bin.z77
-system/etc/firmware/RT5370STA.dat
 system/etc/firmware/nvram_AP6181.txt
 system/etc/firmware/nvram_RK903.cal
 system/etc/firmware/nvram_RK903.txt
@@ -128,7 +126,6 @@ system/etc/firmware/fw_awnb108_ap.bin
 system/etc/firmware/fw_RK901.bin
 system/etc/firmware/nvram_AP6493.txt
 system/etc/firmware/fw_bcm4330.bin
-system/etc/firmware/nvram.txt
 system/etc/firmware/nvram_RK901.txt
 system/etc/firmware/fw_RK901a2_apsta.bin
 system/etc/firmware/fw_RK901a2.bin
@@ -185,7 +182,7 @@ system/etc/wifi/wpa_supplicant_overlay.conf
 #system/lib/librilutils.so
 
 #
-system/etc/media_profiles.xml
+system/etc/media_profiles_default.xml
 system/etc/audio_policy.conf
 system/bin/performance
 #system/lib/libperformance_runtime.so
